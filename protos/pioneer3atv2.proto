@@ -189,7 +189,7 @@ PROTO pioneer3atv2 [
         device [
           RotationalMotor {
             name "back left wheel"
-            maxVelocity 6.4
+            maxVelocity 20
             maxTorque 20
           }
           PositionSensor {
@@ -1931,7 +1931,7 @@ PROTO pioneer3atv2 [
         device [
           RotationalMotor {
             name "back right wheel"
-            maxVelocity 6.4
+            maxVelocity 20
             maxTorque 20
           }
           PositionSensor {
@@ -2055,7 +2055,7 @@ PROTO pioneer3atv2 [
         device [
           RotationalMotor {
             name "front left wheel"
-            maxVelocity 6.4
+            maxVelocity 20
             maxTorque 20
           }
           PositionSensor {
@@ -2082,7 +2082,7 @@ PROTO pioneer3atv2 [
         device [
           RotationalMotor {
             name "front right wheel"
-            maxVelocity 6.4
+            maxVelocity 20
             maxTorque 20
           }
           PositionSensor {
