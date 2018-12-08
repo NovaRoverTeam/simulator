@@ -10,10 +10,6 @@ PROTO Tennis [
   field SFString   name            "tennisball"
   field SFColor    color           1.0 0.54 0.08  # Defines the color of the ball.
   field SFFloat    radius          0.0325         # Defines the radius of the ball.
-  field SFFloat    mass            0.055          # Defines the mass of the ball.
-  field MFVec3f    centerOfMass    [0 -0.0001 0]  # Defines the center of mass of the ball.
-  field SFFloat    linearDamping   0.17           # Defines the linear damping of the ball.
-  field SFFloat    angularDamping  0.33           # Defines the angular damping of the ball.
   field SFString   contactMaterial "default"      # Is `Solid.contactMaterial`.
   field SFNode     physics          NULL                 # Is `Solid.physics`.
   field SFBool     locked           FALSE                # Is `Solid.locked`.
@@ -40,16 +36,7 @@ PROTO Tennis [
     ]
     contactMaterial IS contactMaterial
     boundingObject USE BALL_SHAPE
-    physics Physics {
-      density -1
-      mass IS mass
-      centerOfMass IS centerOfMass
-      inertiaMatrix [ 0.000023 0.000023 0.000023, 0 0 0 ]
-      damping Damping {
-        linear IS linearDamping
-        angular IS angularDamping
-      }
-    }
+    physics IS physics
     name IS name
     model "ball"
     physics IS physics
