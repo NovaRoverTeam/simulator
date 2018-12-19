@@ -16,7 +16,7 @@ int main() {
   WbDeviceTag midLeft = wb_robot_get_device("rtm_mid_left_wheel");
 
   //Set speeds
-  double speed = 1.5;
+  double speed = 3;
   wb_motor_set_position(frontRight, INFINITY);
   wb_motor_set_velocity(frontRight, speed);
   wb_motor_set_position(backRight, INFINITY);
