@@ -13,6 +13,7 @@ int main() {
   
   WbDeviceTag frontLeft = wb_robot_get_device("rtm_front_left_wheel");
   WbDeviceTag backLeft = wb_robot_get_device("rtm_back_left_wheel");
+  WbDeviceTag midLeft = wb_robot_get_device("rtm_mid_left_wheel");
 
   //Set speeds
   double speed = 1.5;
@@ -23,12 +24,13 @@ int main() {
   wb_motor_set_position(midRight, INFINITY);
   wb_motor_set_velocity(midRight, speed);
   
-  
   wb_motor_set_position(frontLeft, INFINITY);
   wb_motor_set_velocity(frontLeft, speed);
   wb_motor_set_position(backLeft, INFINITY);
   wb_motor_set_velocity(backLeft, speed);
-  
+  wb_motor_set_position(midLeft, INFINITY);
+  wb_motor_set_velocity(midLeft, speed);
+    
   while (wb_robot_step(TIME_STEP) != -1){
   }
   
